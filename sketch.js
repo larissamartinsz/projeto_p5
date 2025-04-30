@@ -195,10 +195,6 @@ function draw() {
             highlightedCell = sequence[currentIndex];
             highlightStartTime = nowTime;
             currentIndex++;
-            // Reproduzir som (se disponível)
-            /* if (sequenceSound) {
-              sequenceSound.play();
-            } */
             lastInteractionTime = nowTime;
           } else {
             // Terminou de mostrar a sequência
@@ -298,10 +294,6 @@ function mousePressed() {
         mouseY >= y && 
         mouseY <= y + adjustedCellSize
       ) {
-        // Reproduzir som de clique (se disponível)
-        /* if (clickSound) {
-          clickSound.play();
-        } */
         
         // Destacar brevemente a célula clicada usando o sistema de timing do p5.js
         highlightedCell = index;
@@ -317,10 +309,6 @@ function mousePressed() {
           // Jogador errou a sequência
           wrongCell = index;
           wrongCellTime = millis();
-          
-          /* if (failSound) {
-            failSound.play();
-          } */
           
           setTimeout(() => {
             gameState = "GAME_OVER";
